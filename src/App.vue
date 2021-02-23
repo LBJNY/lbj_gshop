@@ -6,9 +6,18 @@
 </template>
 
 <script>
+  import {mapActions} from 'vuex'
   import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+  import {reqFoodCategorys} from './api'
 
   export default {
+    mounted () {
+      this.getAddress()
+      this.getUserInfo()
+    },
+    methods:{
+      ...mapActions(['getAddress','getUserInfo'])
+    },
     components: {
       FooterGuide
     }
@@ -20,4 +29,5 @@
     width 100%
     height 100%
     background #f5f5f5
+    touch-action pan-y
 </style>

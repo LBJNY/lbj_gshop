@@ -56,7 +56,6 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
-
   .food
     position: fixed
     left: 0
